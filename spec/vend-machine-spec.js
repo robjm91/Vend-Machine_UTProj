@@ -28,7 +28,17 @@ describe("VendingMachine", function(){
         expect(vendingMachine.amountOfMoneyInChange).toBe(7);
     })
     describe("calculateReturnChange", function() {
-        var changeToReturn;
-        
-    }
+        var ;
+
+        beforeEach(function() {
+            changeToReturn = new Change();
+        });
+
+        it("change to return is negative number returns 0 dollars", function(){
+            changeToReturn.calculateReturnChange(-1);
+
+            expect(changeToReturn).toBe(0);
+        });
+
+    });
 })
