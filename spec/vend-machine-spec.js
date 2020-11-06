@@ -26,19 +26,20 @@ describe("VendingMachine", function(){
         vendingMachine.addMoneyToMachine(2);
 
         expect(vendingMachine.amountOfMoneyInChange).toBe(7);
-    })
-    describe("calculateReturnChange", function() {
-        var ;
-
-        beforeEach(function() {
-            changeToReturn = new Change();
-        });
-
-        it("change to return is negative number returns 0 dollars", function(){
-            changeToReturn.calculateReturnChange(-1);
-
-            expect(changeToReturn).toBe(0);
-        });
-
     });
-})
+
+});
+describe("calculateReturnChange", function() {
+    var vendingMachine;
+
+    beforeEach(function() {
+        vendingMachine = new VendingMachine();
+    });
+
+    it("should return zero change to customer when moneyInput - priceOfItem", function(){
+        let change = vendingMachine.calculateReturnChange(1,1);//get the 'change' from 'this method' in 'vending machine'
+
+        expect(change).toBe(0);
+    });
+
+});

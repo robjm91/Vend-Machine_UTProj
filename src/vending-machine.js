@@ -5,7 +5,7 @@ class VendingMachine {
 
     constructor() {
         this.amountOfMoneyInChange = 5.00;
-        this.candyBars = [];
+        this.candyBars = [];// these will change
         this.bagsOfChips = [];
         this.packsOfGum = [];
 
@@ -37,8 +37,8 @@ class VendingMachine {
     }
 
     removeItemFromInventory(itemToRemove) {
-        if(itemToRemove === "candy bar") {
-            return this.candyBars.shift();
+        if(itemToRemove === "candy bar") { 
+            return this.candyBars.shift();//returns item type candybar
         }
         else if(itemToRemove === "bag of chips") {
             return this.bagsOfChips.shift();
@@ -50,7 +50,7 @@ class VendingMachine {
 
     addItemBackToInventory(itemToReinsert) {
         if(itemToReinsert.name === "candy bar") {
-            this.candyBars.unshift(itemToReinsert);
+            this.candyBars.unshift(itemToReinsert);//returns nada
         }
         else if(itemToReinsert.name === "bag of chips") {
             this.bagsOfChips.unshift(itemToReinsert);
