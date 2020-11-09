@@ -39,3 +39,16 @@ describe("calculateReturnChange", function() {
     });
 
 });
+describe("removeItemFromInventory", function() {
+    var vendingMachine;
+
+    beforeEach(function() {
+        vendingMachine = new VendingMachine();
+    });
+
+    it("should remove candy bar", function(){
+        let itemtoRemove = vendingMachine.removeItemFromInventory("candy bar");
+
+        expect(itemtoRemove).toBe(itemtoRemove);
+    });
+});
