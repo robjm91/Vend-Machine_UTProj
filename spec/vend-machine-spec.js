@@ -52,3 +52,16 @@ describe("removeItemFromInventory", function() {
         expect(itemtoRemove).toBe(itemtoRemove);
     });
 });
+describe("removeItemFromInventory", function() {
+    var vendingMachine;
+
+    beforeEach(function() {
+        vendingMachine = new VendingMachine();
+    });
+
+    it("should remove bag of chips", function(){
+        let itemtoRemove = vendingMachine.removeItemFromInventory("bag of chips");
+
+        expect(itemtoRemove).toBe(itemtoRemove);
+    });
+});
