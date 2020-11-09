@@ -78,3 +78,29 @@ describe("removeItemFromInventory", function() {
         expect(itemtoRemove).toBe(itemtoRemove);
     });
 });
+describe("addItemBackToInventory", function() {
+    var vendingMachine;
+
+    beforeEach(function() {
+        vendingMachine = new VendingMachine();
+    });
+
+    it("should reinsert candy bar", function(){
+        let itemToReinsert = vendingMachine.addItemBackToInventory("candy bar");
+
+        expect(itemToReinsert).toBe(itemToReinsert);
+    });
+});
+describe("addItemBackToInventory", function() {
+    var vendingMachine;
+
+    beforeEach(function() {
+        vendingMachine = new VendingMachine();
+    });
+
+    it("should reinsert bag of chips", function(){
+        let itemToReinsert = vendingMachine.addItemBackToInventory("bag of chips");
+
+        expect(itemToReinsert).toBe(itemToReinsert);
+    });
+});
