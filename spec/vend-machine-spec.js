@@ -104,3 +104,16 @@ describe("addItemBackToInventory", function() {
         expect(itemToReinsert).toBe(itemToReinsert);
     });
 });
+describe("addItemBackToInventory", function() {
+    var vendingMachine;
+
+    beforeEach(function() {
+        vendingMachine = new VendingMachine();
+    });
+
+    it("should reinsert pack of gum", function(){
+        let itemToReinsert = vendingMachine.addItemBackToInventory("pack of gum");
+
+        expect(itemToReinsert).toBe(itemToReinsert);
+    });
+});
